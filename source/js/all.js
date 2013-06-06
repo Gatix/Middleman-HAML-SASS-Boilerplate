@@ -1,1 +1,5 @@
-//= require_tree .
+//= require jquery.placeholder.min
+
+$( function () {
+  $('input, textarea').placeholder();
+});

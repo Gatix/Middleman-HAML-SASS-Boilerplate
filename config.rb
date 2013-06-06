@@ -12,7 +12,7 @@ compass_config do |config|
 end
 
 activate :relative_assets
-activate :livereload, :host => 'gatix.dev'
+activate :livereload, :host => 'localhost'
 
 ###
 # Page options, layouts, aliases and proxies
