@@ -12,7 +12,16 @@ compass_config do |config|
 end
 
 activate :relative_assets
-activate :livereload, :host => 'localhost'
+activate :livereload, :host => 'gatix.dev'
+
+if ENV["HOSTNAME"] == "dodi"
+  activate :livereload, :host => 'dodi.local'
+elsif ENV["HOSTNAME"] == "archbox"
+  activate :livereload, :host => 'gatix.dev'
+else
+  activate :livereload, :host => 'localhost'
+end
+
 
 ###
 # Page options, layouts, aliases and proxies
