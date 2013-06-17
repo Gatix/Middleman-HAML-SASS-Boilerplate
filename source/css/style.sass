@@ -7,6 +7,10 @@
 
 @import 'colors'
 @import 'globals'
+@import 'common'
+
+*
+  *behavior: url(../js/boxsizing.htc)
 
 .ie7
   @import 'ie7'
@@ -16,3 +20,6 @@
 
 .ie9
   @import 'ie9'
+
+@media print
+  @import 'print'

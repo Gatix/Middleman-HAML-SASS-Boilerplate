@@ -3,13 +3,15 @@
   width: image-width($image)
   background: image-url($image)
 
-@mixin clearfix()
+
+@mixin clearfix
   &:after
     display: block
     content: '.'
     clear: both
     visibility: hidden
     height: 0
+
 
 @mixin input-placeholder($color)
   &.placeholder
@@ -19,9 +21,11 @@
   &::-webkit-input-placeholder
     color: $color
 
+
 // from Bourbon
 
 @mixin triangle ($size, $color, $direction)
+
   height: 0
   width: 0
 
@@ -51,3 +55,21 @@
       border-left:  $size solid transparent
     @else if $direction == down-left
       border-right: $size solid transparent
+
+
+@mixin inline-block
+  display: inline-block
+  vertical-align: baseline
+  zoom: 1
+  *display: inline
+  *vertical-align: auto
+
+
+// Add percentage of white to a color
+@function tint($color, $percent)
+  @return mix(white, $color, $percent)
+
+
+// Add percentage of black to a color
+@function shade($color, $percent)
+  @return mix(black, $color, $percent)
